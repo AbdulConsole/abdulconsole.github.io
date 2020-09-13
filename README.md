@@ -4,7 +4,7 @@ Connect me via twitter [@abdulconsole](https://twitter.com/AbdulConsole) to chat
 
 I am a cyber security undergrad student, I code primarily for the web using JavaScript and Python, but dabble in other languages and other Assembly related languages. I am a passonate Information security enthusiatic, Malware analysis/Reverse engineering specialist.
 
-I am also into bug hunting, and also a CTF player. I stay on facebook also at my idle time [@abdull.console](https://www.facebook.com/abdull.console) you are free to chat me up to learn, or ask me about RE/MAnalysis/WebH, Just a DM away
+I am also into bug hunting, and also a CTF player. I stay on facebook also at my idle time [@abdull.console](https://m.facebook.com/abdull.console) you are free to chat me up to learn, or ask me about RE/MAnalysis/WebH, Just a DM away
 
 ### Projects
 
