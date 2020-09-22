@@ -1,5 +1,8 @@
 ## Welcome to Abdul Console Profile Page
 
+Happy Birthday to me 🎉
+shout from [Prince AY](https://www.google.com)
+
 Connect me via twitter [@abdulconsole](https://twitter.com/AbdulConsole) to chat me, am always a DM away.
 
 I am a cyber security undergrad student, I code primarily for the web using JavaScript and Python, but dabble in other languages and other Assembly related languages. I am a passonate Information security enthusiatic, Malware analysis/Reverse engineering specialist.
