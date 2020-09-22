@@ -1,7 +1,7 @@
 ## Welcome to Abdul Console Profile Page
 
 Happy Birthday to me 🎉
-shout from [Prince AY](https://www.google.com)
+shout from [Prince AY](./Abdulconsole.html)
 
 Connect me via twitter [@abdulconsole](https://twitter.com/AbdulConsole) to chat me, am always a DM away.
 
