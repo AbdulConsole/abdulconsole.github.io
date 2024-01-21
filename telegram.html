@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telegram Bot Chat ID</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Roboto, "Lucida Sans", "Lucida Sans Regular",
+          "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      #app {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .result {
+        height: 5em;
+      }
+      h2 {
+        font-weight: normal;
+      }
+      .input {
+        display: flex;
+        justify-content: center;
+      }
+      .lds-dual-ring {
+        display: inline-block;
+        width: 80px;
+        height: 80px;
+      }
+      .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #fcf;
+        border-color: #fcf transparent #fcf transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+      }
+      @keyframes lds-dual-ring {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .error {
+        color: rgb(207, 127, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <script src="https://unpkg.com/vue@3"></script>
+
+    <div id="app">
+      <div class="title">
+        <h2>Telegram Bot Chat ID identifier</h2>
+      </div>
+      <div class="input">
+        <input type="text" v-model="token" placeholder="Token" />
+        <button :disabled="!token || loading" @click="getChatId()">Get Chat ID</button>
+      </div>
+      <div class="result">
+        <h2 v-if="chatId">Chat ID: {{ chatId }}</h2>
+        <h3 v-if="error" class="error">{{error}}</h3>
+        <div class="loading" v-show="loading">
+            <div class="lds-dual-ring"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            token: "",
+            chatId: "",
+            loading:false,
+            error: '',
+          };
+        },
+        methods: {
+          async getChatId() {
+            this.error = '';
+            this.loading = true;
+            this.chatId = '';
+            const { token } = this;
+            if (!token) {
+              return;
+            }
+            try {
+              const res = await fetch(`https://api.telegram.org/bot${token}/getUpdates`);
+              const { result } = await res.json();
+              this.chatId = result[0].message.chat.id;
+              if (!this.chatId) {
+                this.error = 'Cannot get Chat ID. Check your token and send a message in your chat.';
+              }
+            } catch (e) {
+              this.error = 'Cannot get Chat ID. Check your token and send a message in your chat.';
+            } finally {
+              this.loading = false;
+            }
+          },
+        },
+      }).mount("#app");
+    </script>
+  </body>
+</html>
