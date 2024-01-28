@@ -1,0 +1,142 @@
+* {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+body {
+    height: 100vh;
+    width: 100%;
+    background: #ccc;
+    scroll: no-scroll;
+    color: brown;
+    font-family: Halvetica;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*text-align: center;*/
+}
+
+.container {
+    width: 80%;
+    /*height: 400px;*/
+    padding: 30px;
+    background-color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow:3px 3px 10px 1px #777;
+    
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+h2 {
+    color: #5D3FD3;
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 15px;
+}
+
+.inputBox {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.inputBox > input {
+    padding: 15px 20px;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    border: 2px solid #5D3FD3;
+    border-radius: 5px;
+    color: #5D3FD3;
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.inputBox > span {
+    position: absolute;
+    left: 0;
+    padding: 20px 20px;
+    pointer-events: none;
+    font-size: 1em;
+    transition: .5s;
+    text-transform: uppercase;
+    color: #777;
+    letter-spacing: 0.1em;
+}
+
+.inputBox input:focus ~ span,
+.inputBox input:valid ~ span{
+    color: #fff;
+    font-size: 0.75em;
+    transform: translateX(20px) translateY(4px);
+    padding: 0 5px;
+    background-color: #5D3FD3;
+    border-radius: 2px;
+}
+
+#toggle {
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    background-image: url("./img/show.png");
+    background-size: cover;
+    cursor: pointer;
+}
+
+#toggle.hide {
+    background-image: url("./img/hide.png");
+    background-size: cover;
+}
+
+p {
+    color: #51414F;
+    font-size: 17px;
+    padding: 3px 0;
+}
+ul {
+    padding: 10px 0;
+}
+ul > li {
+    list-style: none;
+    color: #999;
+}
+li > i {
+    padding: 5px;
+    margin-right: 5px;
+    font-size: 1.2rem;
+    color: #aaa;
+    width: 20px;
+}
+.fa-check {
+    color: green;
+}
+.btn {
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: #5D3FD3;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+.forget {
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  color: #5D3FD3;
+  font-size: 30px;
+}
