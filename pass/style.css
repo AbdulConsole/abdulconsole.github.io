@@ -140,3 +140,10 @@ footer {
   color: #5D3FD3;
   font-size: 30px;
 }
+
+
+@media (min-width: 600px) {
+  .container {
+    width:50%;
+  }
+}
