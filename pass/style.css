@@ -19,7 +19,7 @@ body {
 }
 
 .container {
-    width: 65%;
+    width: 80%;  /*65%;*/
     /*height: 400px;*/
     padding: 30px;
     background-color: #fff;
@@ -144,6 +144,6 @@ footer {
 
 @media (min-width: 600px) {
   .container {
-    width:50%;
+    width:70%;
   }
 }
