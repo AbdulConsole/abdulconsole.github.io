@@ -4,15 +4,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>::Site::</title>
+  <style>
+    body {
+      background-color: rgba(199, 203, 244, 0.5);
+      color: rgba(45, 47, 78, 1);
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+      width: 100vw;
+    }
+    .app {
+      background: rgba(108, 161, 121, 1);
+      padding: 10px;
+      width: 80%;
+      border-radius: 4px;
+      margin: 10px;
+    }
+    a {
+      color: rgba(255, 255, 255, 1);
+      font-weight: 500;
+      text-decoration: none;
+      width: 70%;
+    }
+    .golang {
+      position: absolute;
+      z-index: -1;
+      width: 400px;
+      opacity: 0.08;
+      top: 0;
+      left: -10px;
+    }
+  </style>
 </head>
 
 <body>
   <h1>My Apps</h1>
-  <a href="telegram.html">Telegram ID Retrival</a> <br>
-  <a href="./pass">Password meter</a> <br>
-  <a href="https://abdulconsole.github.io/cstore">c-store</a> <br>
-  <a href="https://abdulconsole.github.io/mfcLab/weather/">Weather ☁️ App</a>
+  
+  <a href="telegram.html">
+    <div class="app">
+      Telegram ID Retrival
+    </div>
+  </a>
+  
+  <a href="./pass">
+    <div class="app">
+      Password meter
+    </div>
+  </a>
+  
+  <a href="https://abdulconsole.github.io/cstore">
+    <div class="app">
+      C-store
+    </div>
+  </a>
+  
+  <a href="https://abdulconsole.github.io/mfcLab/weather/">
+    <div class="app">
+      Weather ☁️ App
+    </div>
+  </a>
+  
+  <a href="https://abdulconsole.github.io/mfcLab/learn_js/vote.html">
+    <div class="app">
+      Man of The Match
+    </div>
+  </a>
+  
+  <img src="https://www.smartsight.in/wp-content/uploads/2019/10/golang.png" alt="golang" class="golang">
+
+
+
+
 </body>
 
 </html>
