@@ -20,7 +20,7 @@ body {
 
 .container {
     width: 80%;  /*65%;*/
-    /*height: 400px;*/
+    /*height: 70vh;*/
     padding: 30px;
     background-color: #fff;
     border: none;
@@ -136,7 +136,7 @@ li > i {
 }
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 100px;
   color: #5D3FD3;
   font-size: 30px;
 }
