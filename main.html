@@ -13,10 +13,13 @@
         box-sizing: border-box;
       }
       body {
-        background-color: #161516;
+        /*background-color: #161516;*/
+        background: url('img/bg3.jpg');
+        background-size: cover;
+        
         color: aliceblue;
         /* min-height: 100vh; */
-        margin-top: 50px;
+        /*margin-top: 50px;*/
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -24,17 +27,18 @@
       }
       .container {
         /* background-color: aqua; */
-        /* border: 1px solid #918f91; */
+        border: 1px solid #918f91; 
         border-radius: 5px;
         width: 80%;
-        min-height: 200px;
+        min-height: 180px;
+        margin-top: 50px;
 
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
       }
-      .head {
+      .head, .footer{
         background-color: #1B1817;
         border-radius: 5px;
         width: 300px;
@@ -43,7 +47,80 @@
         text-align: center;
       }
       .head .fa-solid {
-        padding: 5px 15px;
+        padding: 15px;
+      }
+      img {
+        width: 100px;
+      }
+      @media only screen and (min-width : 500px) {
+        /* Styles here */
+        .head {
+          background-color: #4D5286;
+        }
+        .fa-solid {
+          padding: 15px 30px;
+          
+        }
+        .footer {
+          background-color: #4D5286;
+          position: fixed;
+          bottom: 10px;
+          padding: 15px;
+          margin-bottom: 50px;
+        }
+        .foot {
+          font-size: 20px;
+          font-weight: 600;
+          letter-spacing: 2px;
+        }
+        .main {
+         /*background: red;*/
+         margin-top: 30px;
+         min-height: 50px;
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+         padding: 30px;
+        }
+        .main div:nth-of-type(1){
+          flex-grow: 1;
+          
+        }
+        .main div:nth-of-type(2){
+          flex-grow: 3;
+        }
+        .left img {
+         /* width: 40%;*/
+          border-radius: 50%;
+          border: 4px solid white;
+          margin-right: 20px;
+        }
+        .main .right {
+          font-size: 18px;
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        .social i {
+          margin: 20px 10px;
+        }
+        .brand {
+          margin-top: 20px;
+          font-size: 18px;
+          font-weight: 500;
+          letter-spacing: 2px;
+        }
+        .label {
+          background: yellow;
+          padding: 3px;
+          transform: rotate(57deg);
+          display: block;
+          width: 20px;
+          outline: solid red 1px;
+        }
       }
     </style>
   </head>
@@ -51,15 +128,34 @@
 
     <section class="container">
         <div class="head">
-            <i class="fa-solid fa-house-user"></i>
-            <i class="fa-solid fa-house-user"></i>
-            <i class="fa-solid fa-house-user"></i>
-            <i class="fa-solid fa-house-user"></i>
+            <i class="fa-solid fa-house-user fa-2xl"></i>
+            <i class="fa-solid fa-folder-open fa-2xl"></i>
+            <i class="fa-solid fa-file-lines fa-2xl"></i>
+            <i class="fa-solid fa-user-shield fa-2xl"></i>
         </div>
+        
         <div class="main">
-            <!-- main -->
+            <!-- main --> 
+            <div class="left">
+              <img src="img/ab.jpg" alt="AbdulConsole">
+            </div>
+            <div class="right">
+              <div class="social">
+                  <i class="fa-brands fa-facebook fa-2xl"></i>
+                  <i class="fa-brands fa-x-twitter fa-2xl"></i>
+                  <i class="fa-brands fa-github fa-2xl"></i>
+                  <i class="fa-brands fa-linkedin fa-2xl"></i>
+              </div>
+              <div class="brand">AbdulConsole <span>CEH</span>, CSCU</div>
+             
+            </div>
         </div>
         <!-- help -->
+        
+        
+        <div class="footer">
+          <p class="foot">&copy; AbdulConsole 2024</p>
+        </div>
     </section>
 
   </body>
