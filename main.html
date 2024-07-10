@@ -129,11 +129,11 @@
           width: 100%;
         }
         ul li.list {
-          background: #D727FF;
+          background: #4D5286;
           padding: 7px 5px;
-          width: 100%;
+          width: 90%;
           border-radius: 5px;
-          margin-bottom: 10px;
+          margin: 10px auto;
         }
         .list a {
           text-decoration: none;
@@ -194,7 +194,8 @@
       });
       
       project.addEventListener('click', function () {
-        board.innerHTML = "<ul>
+    board.innerHTML = `
+      <ul>
         <li class='list'><a href='#'>Project 1</a></li>
         <li class='list'><a href='#'>Project 2</a></li>
         <li class='list'><a href='#'>Project 3</a></li>
@@ -204,7 +205,7 @@
         <li class='list'><a href='#'>Project 7</a></li>
         <li class='list'><a href='#'>Project 8</a></li>
       </ul>
-      ";
+    `;
       });
       
       file.addEventListener('click', function () {
