@@ -42,13 +42,16 @@
         min-height: 200px;
         font-size: 25px;
         width: 90%;
-        /*border: 1px solid #918f91;*/
-        margin-top: 20px;
+        /*border: 1px solid #918f91;
+        background: red;
+        overflow: hidden;*/
+        margin-top: 10px;
         text-align: justify;
         line-height: 42px;
       }
       .head, .footer{
         background-color: #1B1817;
+        opacity: 0.9;
         border-radius: 5px;
         width: 300px;
         padding: 10px;
@@ -121,6 +124,23 @@
           font-weight: 500;
           letter-spacing: 1.5px;
         }
+        ul {
+          list-style: none;
+          width: 100%;
+        }
+        ul li.list {
+          background: #D727FF;
+          padding: 7px 5px;
+          width: 100%;
+          border-radius: 5px;
+          margin-bottom: 10px;
+        }
+        .list a {
+          text-decoration: none;
+          color: #E5E2E6;
+          padding-left: 20px;
+          font-size: 18px;
+        }
       }
     </style>
   </head>
@@ -128,10 +148,10 @@
 
     <section class="container">
         <div class="head">
-            <i class="fa-solid fa-house-user fa-2xl"></i>
-            <i class="fa-solid fa-folder-open fa-2xl"></i>
-            <i class="fa-solid fa-file-lines fa-2xl"></i>
-            <i class="fa-solid fa-user-shield fa-2xl"></i>
+            <i class="fa-solid fa-house-user fa-2xl home"></i>
+            <i class="fa-solid fa-folder-open fa-2xl project"></i>
+            <i class="fa-solid fa-file-lines fa-2xl file"></i>
+            <i class="fa-solid fa-user-shield fa-2xl user"></i>
         </div>
         
         <div class="main">
@@ -158,7 +178,42 @@
         </div>
     </section>
     <section class="about">
-      Hi, I'm abdulConsole. Starting as a software engineer, I earned a BTECH in cyber security. Now, I'm a junior SAP Security Consultant, focusing on security apps, exploit development, research, and SAP ABAP. Join me for insights into security technology.
+      default
     </section>
+    
+    <script>
+      let home = document.querySelector('.home');
+      let project = document.querySelector('.project');
+      let file = document.querySelector('.file');
+      let user = document.querySelector('.user');
+      
+      let board = document.querySelector('.about');
+      
+      home.addEventListener('click', function () {
+        board.textContent = "Hi, I'm abdulConsole. Starting as a software engineer, I earned a BTECH in cyber security. Now, I'm a junior SAP Security Consultant, focusing on security apps, exploit development, research, and SAP ABAP. Join me for insights into security technology.";
+      });
+      
+      project.addEventListener('click', function () {
+        board.innerHTML = "<ul>
+        <li class='list'><a href='#'>Project 1</a></li>
+        <li class='list'><a href='#'>Project 2</a></li>
+        <li class='list'><a href='#'>Project 3</a></li>
+        <li class='list'><a href='#'>Project 4</a></li>
+        <li class='list'><a href='#'>Project 5</a></li>
+        <li class='list'><a href='#'>Project 6</a></li>
+        <li class='list'><a href='#'>Project 7</a></li>
+        <li class='list'><a href='#'>Project 8</a></li>
+      </ul>
+      ";
+      });
+      
+      file.addEventListener('click', function () {
+        board.textContent = 'file';
+      });
+      
+      user.addEventListener('click', function () {
+        board.textContent = 'user';
+      });
+    </script>
   </body>
 </html>
