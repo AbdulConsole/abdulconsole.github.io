@@ -228,6 +228,8 @@
       
       let board = document.querySelector('.about');
       
+      let btn = document.querySelector('.btn');
+      
       home.addEventListener('click', function () {
         board.innerHTML = `
         <h1 class="topic">~Whoami</h1>
@@ -272,6 +274,10 @@
       
       user.addEventListener('click', function () {
         board.textContent = 'My user profile information ℹ️';
+      });
+      
+      btn.addEventListener('click', function () {
+        alert('Working on it.  Will be available soon.');
       });
       
       
