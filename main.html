@@ -60,6 +60,7 @@
       }
       .head .fa-solid {
         padding: 15px;
+       /* flex: 1 1 auto;*/
       }
       img {
         width: 100px;
@@ -71,7 +72,6 @@
         }
         .fa-solid {
           padding: 15px 30px;
-          
         }
         .footer {
           background-color: #4D5286;
@@ -141,6 +141,43 @@
           padding-left: 20px;
           font-size: 18px;
         }
+        .topic {
+          text-align: center;
+          text-shadow: 2px 5px 2px #404151;
+        }
+        .btn {
+          padding: 10px;
+          border: none;
+          border-radius: 8px;
+          background: #4D5286;
+          color: #C7C8D0;
+          font-size: 28px;
+          
+        }
+        .fil {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        .fil .items {
+          flex: 1 1 calc(50% - 10px);
+          box-sizing: border-box;
+          padding: 0px;
+          border: 1px solid #ccc;
+          text-align: center;
+        }
+        .flash1 {
+          background: url('img/flyers/program1.jpg');
+          height: 250px;
+          background-size: cover;
+          background-position: center;
+        }
+        .flash2 {
+          background: url('img/flyers/about1.jpg');
+          height: 250px;
+          background-size: cover;
+          background-position: center;
+        }
       }
     </style>
   </head>
@@ -178,7 +215,9 @@
         </div>
     </section>
     <section class="about">
-      default
+      <h1 class="topic">~Whoami</h1>
+      <p>Hi, I'm abdulConsole. Starting as a software engineer, I earned a BTECH in cyber security. Now, I'm a junior SAP Security Consultant, focusing on security apps, exploit development, research, and SAP ABAP. Join me for insights into security technology.</p>
+      <button class="btn" type="submit">Download my resume</button>
     </section>
     
     <script>
@@ -190,30 +229,71 @@
       let board = document.querySelector('.about');
       
       home.addEventListener('click', function () {
-        board.textContent = "Hi, I'm abdulConsole. Starting as a software engineer, I earned a BTECH in cyber security. Now, I'm a junior SAP Security Consultant, focusing on security apps, exploit development, research, and SAP ABAP. Join me for insights into security technology.";
+        board.innerHTML = `
+        <h1 class="topic">~Whoami</h1>
+        <p>Hi, I'm abdulConsole. Starting as a software engineer, I earned a BTECH in cyber security. Now, I'm a junior SAP Security Consultant, focusing on security apps, exploit development, research, and SAP ABAP. Join me for insights into security technology.</p>
+        <button class="btn" type="submit">Download my resume</button>
+        `;
       });
       
       project.addEventListener('click', function () {
     board.innerHTML = `
+      <h1 class="topic">My Projects</h1>
       <ul>
-        <li class='list'><a href='#'>Project 1</a></li>
+        <li class='list'><a href='telegram.html'>Telegram ID Retrival (JS & API)</a></li>
         <li class='list'><a href='#'>Project 2</a></li>
         <li class='list'><a href='#'>Project 3</a></li>
         <li class='list'><a href='#'>Project 4</a></li>
         <li class='list'><a href='#'>Project 5</a></li>
         <li class='list'><a href='#'>Project 6</a></li>
         <li class='list'><a href='#'>Project 7</a></li>
-        <li class='list'><a href='#'>Project 8</a></li>
       </ul>
     `;
       });
       
       file.addEventListener('click', function () {
-        board.textContent = 'file';
+        board.innerHTML = `
+        <div class="fil">
+          <div class="items">
+            <div class="flash flash1"></div>
+          </div>
+          <div class="items">
+            <div class="flash flash2"></div>
+          </div>
+          <div class="items">
+            <div class="flash flash1"></div>
+          </div>
+          <div class="items">
+            <div class="flash flash2"></div>
+          </div>
+        </div>
+        `;
       });
       
       user.addEventListener('click', function () {
-        board.textContent = 'user';
+        board.textContent = 'My user profile information ℹ️';
+      });
+      
+      
+      let facebook = document.querySelector('.fa-facebook');
+      let x = document.querySelector('.fa-x-twitter');
+      let github = document.querySelector('.fa-github');
+      let linkedin = document.querySelector('.fa-linkedin');
+      
+      facebook.addEventListener('click', function () {
+        window.location.href = 'https://www.facebook.com/abdull.console?mibextid=ZbWKwL';
+      });
+      
+      x.addEventListener('click', function () {
+        window.location.href = 'https://x.com/abdulconsole?t=G4eysijoil7-6De49czc4g&s=09';
+      });
+      
+      github.addEventListener('click', function () {
+        window.location.href = 'https://github.com/AbdulConsole';
+      });
+      
+      linkedin.addEventListener('click', function () {
+        window.location.href = 'https://www.linkedin.com/in/abdulconsole';
       });
     </script>
   </body>
