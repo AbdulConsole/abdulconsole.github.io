@@ -24,54 +24,55 @@
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
+        z-index: 1;
       }
-      .container {
-        /* background-color: aqua; 
-        border: 1px solid #918f91; */
-        border-radius: 5px;
-        width: 90%;
-        min-height: 180px;
-        margin-top: 50px;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0.6;
+        background: #21243E;
+        z-index: 2;
       }
-      .about {
-        min-height: 200px;
-        font-size: 25px;
-        width: 90%;
-        /*border: 1px solid #918f91;
-        background: red;
-        overflow: hidden;*/
-        margin-top: 10px;
-        text-align: justify;
-        line-height: 42px;
-      }
-      .head, .footer{
-        background-color: #1B1817;
-        opacity: 0.9;
-        border-radius: 5px;
-        width: 300px;
-        padding: 10px;
-        box-shadow: 0px 1px 10px #000000a6;
-        text-align: center;
-      }
-      .head .fa-solid {
-        padding: 15px;
-       /* flex: 1 1 auto;*/
-      }
+      
+      
       img {
         width: 100px;
       }
       @media only screen and (min-width : 500px) {
-        /* Styles here */
-        .head {
-          background-color: #4D5286;
+        .container {
+          border-radius: 5px;
+          width: 90%;
+          min-height: 180px;
+          margin-top: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: center;
+          z-index: 3;
+        }
+        .about {
+          min-height: 200px;
+          font-size: 25px;
+          width: 90%;
+          margin-top: 10px;
+          text-align: justify;
+          line-height: 42px;
+          z-index: 3;
+        }
+        .head, .footer{
+           background-color: #4D5286;
+           opacity: 0.9;
+           border-radius: 5px;
+           width: 310px;
+           padding: 10px;
+           box-shadow: 0px 1px 10px #000000a6;
+           text-align: center;
         }
         .fa-solid {
-          padding: 15px 30px;
+          padding: 15px 20px;
         }
         .footer {
           background-color: #4D5286;
@@ -150,7 +151,7 @@
           border: none;
           border-radius: 8px;
           background: #4D5286;
-          color: #C7C8D0;
+          color: #eee;
           font-size: 28px;
           
         }
@@ -182,7 +183,7 @@
     </style>
   </head>
   <body>
-
+    <section class="overlay"></section>
     <section class="container">
         <div class="head">
             <i class="fa-solid fa-house-user fa-2xl home"></i>
